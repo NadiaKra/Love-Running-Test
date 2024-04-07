@@ -1,7 +1,7 @@
 /* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-/* Asterisk wildcard selector to override default styles addes by the browser */
+/* Asterisk wildcard selector to override default styles added by the browser */
 * {
     padding: 0;
     margin: 0;
@@ -14,8 +14,15 @@ body {
     display: flex;
     flex-direction: column;
     /* Generic project styles */
-    color:#3a3a3a;
-    font-family: "Lato", sans-serif;
+    color: #3a3a3a;
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
 }
 
 /* Header */
@@ -36,13 +43,6 @@ header a {
     color: inherit;
 }
 
-h1 {
-    font-family: "Oswald", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #252525;
-}
-
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
@@ -54,7 +54,7 @@ h1 {
 }
 
 .active {
-    border-bottom: 1px solid #252525;
+    border-bottom: 1px solid #3a3a3a;
 }
 
 /* Navbar styles with dropdown toggle */
@@ -66,7 +66,7 @@ nav {
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
-    top: 100%
+    top: 100%;
 }
 
 /* Nav toggle */
@@ -90,20 +90,36 @@ main {
 }
 
 /* Hero section */
-
 #hero {
     height: 600px;
     width: 100%;
     background: url("../images/hero-image.webp") no-repeat center center/cover;
+    position: relative;
+}
+
+#cover-text {
+    /* Final rgba value sets the opacity so it is semi-transparent */
+    background-color: rgba(241, 109, 107, .7);
+    font-size: 130%;
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+    min-height: 200px;
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+#cover-text > h2, #cover-text > h3 {
+    color: #ffffff;
 }
 
 /* Footer */
-#social-networks{
+#social-networks {
     text-align: center;
     padding: 20px 0;
     display: flex;
     justify-content: space-evenly;
-    list-style: none;
+    list-style-type: none;
 }
 
 #social-networks i {
@@ -141,18 +157,22 @@ main {
         margin: 0 0.5rem;
     }
 
-    /*Main content*/
+    /* Main content */
     main {
-        /* Push main content down to accomodate larger header */
+        /* Push main content down to accommodate larger header */
         margin-top: 79px;
+    }
+
+    /* Hero image */
+    #cover-text {
+        width: 300px;
+        right: 50px;
     }
 }
 
-/* Media query laptop and larger (992px and up) */
-@media screen and (min-width:992px) {
-
-    #menu a:hover {
-        border-bottom: 1px solid #252525;
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    #menu a:hover{
+        border-bottom: 1px solid #3a3a3a;
     }
-    
 }
