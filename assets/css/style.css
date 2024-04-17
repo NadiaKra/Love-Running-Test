@@ -18,7 +18,9 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -53,7 +55,7 @@ header a {
     list-style-type: none;
 }
 
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
 }
 
@@ -91,6 +93,13 @@ main {
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     margin-top: 47px;
+
+    /* Add margin at the top to prevent content from being covered by the header */
+    margin-top: 47px;
+
+    /* Enable flex properties for child elements */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Hero section */
@@ -113,7 +122,8 @@ main {
     padding-left: 10px;
 }
 
-#cover-text > h2, #cover-text > h3 {
+#cover-text>h2,
+#cover-text>h3 {
     color: #ffffff;
 }
 
@@ -129,8 +139,8 @@ main {
     text-align: center;
 }
 
-#benefits-physical > div,
-#benefits-mental > div {
+#benefits-physical>div,
+#benefits-mental>div {
     line-height: 20px;
     margin-bottom: 20px;
 }
@@ -199,6 +209,52 @@ main {
     line-height: 0;
 }
 
+/* Form page */
+
+#signup {
+    background-image: url(../images/signup-image.webp);
+    background-size: cover;
+    background-position: 75%;
+    padding: 20px 10% 0 10%;
+    flex-grow: 1;
+}
+
+#signup-form {
+    color: #ffffff;
+    background-color: rgba(60, 60, 60, 0.6);
+    padding: 30px;
+}
+
+#signup-form>h2 {
+    color:#fafafa;
+    margin-bottom: 20px;
+}
+
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    height: 25px;
+    width: 100%;
+    margin: 5px,0,20px,0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    padding: 0 5px;
+}
+
+.radio-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.join-button {
+    background-color: #454b1b;
+    color: #fafafa;
+    font-size: 100%;
+    border-radius: 2px;
+    padding: 15px 32px;
+    margin-top: 20px;
+}
 /* Footer */
 #social-networks {
     text-align: center;
@@ -225,6 +281,7 @@ main {
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
     /* Header */
     nav {
         display: block;
@@ -238,7 +295,7 @@ main {
         display: flex;
     }
 
-    #menu > li {
+    #menu>li {
         padding-left: 1rem;
     }
 
@@ -272,12 +329,12 @@ main {
         width: 100%;
     }
 
-    #benefits-physical > div,
-    #benefits-mental > div {
-        width:75%;
+    #benefits-physical>div,
+    #benefits-mental>div {
+        width: 75%;
     }
 
-    #benefits-mental > div{
+    #benefits-mental>div {
         text-align: end;
         align-self: flex-end;
     }
@@ -286,12 +343,13 @@ main {
     #photos {
         column-count: 3;
     }
+
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
 /* Reason section */
 @media screen and (min-width: 992px) {
-    #menu a:hover{
+    #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
 
@@ -308,7 +366,7 @@ main {
         display: flex;
     }
 
-    #benefits > div {
+    #benefits>div {
         flex: 1;
     }
 
@@ -320,11 +378,11 @@ main {
         order: 1;
     }
 
-    #benefits-mental > div {
+    #benefits-mental>div {
         align-self: flex-start;
     }
-    
-    #benefits-physical > div {
+
+    #benefits-physical>div {
         align-self: flex-end;
     }
 }
